@@ -3,181 +3,238 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Nayara Pérez">
-  <title>Portafolio | Nayara Pérez</title>
+  <title>Portafolio Profesional</title>
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
 
-  <header>
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#" class="logo">
-          <img src="static/img/logo_cat.png" alt="Logo" class="logo-img">
-          <span>Nayara Pérez</span>
-        </a>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="static/img/logo_cat.png" alt="Logo" class="logo-img">
+        <span>Portafolio</span>
+      </a>
 
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="#acerca" class="nav-link active">Acerca de mí</a></li>
-          <li><a href="#video-presentacion" class="nav-link">Video</a></li>
-          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-          <li><a href="#educacion" class="nav-link">Educación</a></li>
-          <li><a href="#referencias" class="nav-link">Referencias</a></li>
-          <li><a href="#contacto" class="nav-link">Contacto</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#acerca" class="nav-link active">Acerca de mí</a></li>
+           <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#educacion" class="nav-link">Educación</a></li>
+        <li><a href="#referencias" class="nav-link">Referencias</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- Secciones de contenido para probar la navegación -->
   <main>
-    <!-- Acerca de mí -->
-    <section id="acerca" class="acerca section-container">
-      <div class="hero-content">
-        <h1>Desarrolladora Frontend Junior</h1>
-        <p>Mi enfoque está en construir interfaces web adaptables y dinámicas, unificando un diseño visual cuidado con una navegación fluida e intuitiva. Me impulsa el aprendizaje activo y la curiosidad por seguir creciendo en cada proyecto.</p>
-        <div class="hero-buttons">
-          <a href="#proyectos" class="btn btn-primary">Ver Trabajos</a>
-          <a href="#contacto" class="btn btn-outline">Contactar</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Video de Presentación -->
-    <section id="video-presentacion" class="video-section section-container">
-      <h1>Presentación & Demo</h1>
-      <p class="section-subtitle">Conoce más sobre mi proceso de trabajo y la demostración de mis proyectos.</p>
-      <div class="video-wrapper">
-        <video controls poster="static/img/video_cover.jpg" class="video-player">
-          <source src="static/media/presentacion.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de video.
-        </video>
-      </div>
-    </section>
-
-    <!-- Habilidades -->
-    <section id="habilidades" class="habilidades section-container">
-      <h1>Habilidades</h1>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Lenguajes Principales</h3>
-          <div class="tags">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Herramientas & Entorno</h3>
-          <div class="tags">
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">VS Code</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Desarrollo Frontend</h3>
-          <div class="tags">
-            <span class="tag">Maquetación Responsiva</span>
-            <span class="tag">Manipulación DOM</span>
-            <span class="tag">Eventos JS</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proyectos -->
-    <section id="proyectos" class="proyectos section-container">
-      <h1>Proyectos Destacados</h1>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-info">
-            <h2>NeuroMundo</h2>
-            <p>Plataforma digital orientada a la salud mental de cuidadores y la gestión conductual cotidiana en el Espectro Autista. Integra fichas conductuales, asistente IA y directorio geolocalizado.</p>
-            <div class="tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener" class="btn btn-primary">Ver Demo</a>
-              <a href="https://github.com/nayaraperez" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
-            </div>
-          </div>
-          <div class="project-preview">
-            <img src="static/img/neuromundo_preview.jpg" alt="Vista previa de NeuroMundo" class="project-img">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Educación -->
-    <section id="educacion" class="educacion section-container">
-      <h1>Educación & Certificaciones</h1>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Técnica en Programación</h3>
-          <span class="institution">Liceo Técnico Vate Vicente Huidobro</span>
-          <p>Educación Técnico-Profesional enfocada en lógica de programación y desarrollo de software.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Frontend Junior</h3>
-          <span class="institution">Skillnest</span>
-          <p>Certificación en desarrollo de interfaces web dinámicas e interactivas.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Desarrollo Full Stack Python</h3>
-          <span class="institution">Skillnest</span>
-          <p>Especialización en desarrollo web con enfoque en Python y arquitectura cliente-servidor.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Referencias -->
-    <section id="referencias" class="referencias section-container">
-      <h1>Referencias</h1>
-      <div class="reference-card">
-        <h3>Dany Hernández</h3>
-        <p class="ref-title">Instructor / Mentor Técnico</p>
-      </div>
-    </section>
-
-    <!-- Contacto e Identidad Profesional -->
-    <section id="contacto" class="contacto section-container">
-      <h1>Contacto Profesional</h1>
-      <p>¿Tienes una propuesta o quieres colaborar? Escríbeme directamente o visita mis redes profesionales.</p>
+<!-- Sección Acerca de mí / Hero -->
+<section id="acerca" class="acerca section-container hero-grid">
+  <div class="hero-card">
+    
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Desarrolladora Frontend Junior
+      </h1>
       
-      <div class="contact-cards">
-        <a href="mailto:nayara.perez.profesional@gmail.com" class="contact-card">
-          <span class="contact-icon">📧</span>
-          <h3>Correo Electrónico</h3>
-          <p>nayara.perez.profesional@gmail.com</p>
+      <p class="hero-description">
+        Mi enfoque está en construir interfaces web adaptables y dinámicas, unificando un diseño visual cuidado con una navegación fluida e intuitiva. Me impulsa el aprendizaje activo y la curiosidad por seguir creciendo en cada proyecto.
+      </p>
+      
+      <div class="hero-buttons">
+        <a href="#proyectos" class="btn btn-primary">
+          <span>Ver Trabajos</span>
+          <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
-
-        <a href="https://www.linkedin.com/in/nayara-perez" target="_blank" rel="noopener" class="contact-card">
-          <span class="contact-icon">💼</span>
-          <h3>LinkedIn</h3>
-          <p>linkedin.com/in/nayara-perez</p>
-        </a>
-
-        <a href="https://github.com/nayaraperez" target="_blank" rel="noopener" class="contact-card">
-          <span class="contact-icon">🐙</span>
-          <h3>GitHub</h3>
-          <p>github.com/nayaraperez</p>
-        </a>
+        <a href="#contacto" class="btn btn-outline">Contactar</a>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <p>© 2026 Nayara Pérez · Desarrolladora Frontend Junior</p>
-  </footer>
+    <!-- ESPACIO DE IMAGEN: Foto de perfil / Avatar -->
+    <div class="hero-media">
+      <div class="avatar-wrapper">
+        <img src="static/img/profile_avatar.png" alt="imagen portada" class="hero-img">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Habilidades -->
+<section id="habilidades" class="habilidades section-container">
+  <div class="skills-header">
+    <h2 class="skills-title">Habilidades & Tecnologías</h2>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="card-header">
+        <div class="icon-wrapper">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#18181b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        </div>
+        <h3>Lenguajes Principales</h3>
+      </div>
+      <div class="tags">
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="card-header">
+        <div class="icon-wrapper">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#18181b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+        </div>
+        <h3>Herramientas & Entorno</h3>
+      </div>
+      <div class="tags">
+        <span class="tag">Git</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">VS Code</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="card-header">
+        <div class="icon-wrapper">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#18181b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        </div>
+        <h3>Desarrollo Frontend</h3>
+      </div>
+      <div class="tags">
+        <span class="tag">Maquetación Responsiva</span>
+        <span class="tag">Manipulación DOM</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- Proyectos -->
+<section id="proyectos" class="proyectos section-container">
+  <div class="projects-header">
+    <h2 class="projects-title">Proyectos Destacados</h2>
+  </div>
+
+  <div class="projects-grid">
+    <article class="project-card">
+      <div class="project-info">
+        <h3 class="project-name">NeuroMundo</h3>
+        <p class="project-description">
+          Plataforma digital orientada a la salud mental de cuidadores y la gestión conductual cotidiana en el Espectro Autista. Integra fichas conductuales, asistente IA y directorio geolocalizado.
+        </p>
+        
+        <div class="tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+        </div>
+
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener" class="btn btn-primary">
+            <span>Ver Demo</span>
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+          <a href="https://github.com/nayaraperez" target="_blank" rel="noopener" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-preview">
+        <div class="preview-frame">
+          <img src="static/img/neuromundo_preview.jpg" alt="Vista previa de NeuroMundo" class="project-img">
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- Educación (Sin Años) -->
+<section id="educacion" class="educacion section-container">
+  <div class="education-header">
+    <h2 class="education-title">Educación & Certificaciones</h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <article class="timeline-card">
+        <div class="card-header">
+          <h3 class="degree-title">Técnico en Programación</h3>
+          <span class="institution-badge">Liceo Técnico Vate Vicente Huidobro</span>
+        </div>
+        <p class="degree-description">
+          Educación Técnico-Profesional enfocada en lógica de programación y desarrollo de software.
+        </p>
+      </article>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <article class="timeline-card">
+        <div class="card-header">
+          <h3 class="degree-title">Frontend Junior</h3>
+          <span class="institution-badge">Skillnest</span>
+        </div>
+        <p class="degree-description">
+          Certificación en desarrollo de interfaces web dinámicas e interactivas.
+        </p>
+      </article>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <article class="timeline-card">
+        <div class="card-header">
+          <h3 class="degree-title">Desarrollo Full Stack Python</h3>
+          <span class="institution-badge">Skillnest</span>
+        </div>
+        <p class="degree-description">
+          Especialización en desarrollo web con enfoque en Python y arquitectura cliente-servidor.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- Referencias -->
+<section id="referencias" class="referencias section-container">
+  <div class="references-header">
+    <h2 class="references-title">Referencias Profesionales</h2>
+  </div>
+
+  <div class="references-grid">
+    <article class="reference-card">
+      <div class="ref-avatar-wrapper">
+        <img src="static/img/mentor_avatar.jpg" alt="Dany Hernández" class="ref-img">
+      </div>
+      
+      <div class="ref-content">
+        <h3 class="ref-name">Dany Hernández</h3>
+        <span class="ref-title">Instructor / Mentor Técnico</span>
+        
+        <div class="ref-contacts">
+          <a href="mailto:dany.hernandez@email.com" class="ref-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>dany.hernandez@email.com</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="ref-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
 
   <script src="static/js/script.js"></script>
 </body>
