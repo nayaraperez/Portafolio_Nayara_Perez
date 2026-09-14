@@ -1,140 +1,127 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('section');
-
-  // Alternar menú en dispositivos móviles
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('open');
-    navMenu.classList.toggle('open');
-  });
-
-  // Cerrar menú móvil al seleccionar una opción
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('open');
-      navMenu.classList.remove('open');
-    });
-  });
-
-  // Actualizar enlace activo automáticamente al hacer scroll
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      if (window.scrollY >= sectionTop) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
-  });
-});
-
-
-//sobre mi 
-/* static/js/script.js */
-
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Navegación Móvil
+  // 1. Navegación Móvil Fluid
   const menuToggle = document.getElementById("menu-toggle");
   const navMenu = document.getElementById("nav-menu");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const sections = document.querySelectorAll("section");
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", () => {
       menuToggle.classList.toggle("open");
       navMenu.classList.toggle("open");
     });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuToggle.classList.remove("open");
+        navMenu.classList.remove("open");
+      });
+    });
   }
 
-  // 2. Movimiento fluido ultra suave (Inercia / LERP) para la sección Hero
-  const card = document.querySelector(".hero-card");
+  // 2. ScrollSpy Suave (Resaltador de sección activa)
+  const updateActiveLink = () => {
+    let current = "";
+    const scrollPosition = window.scrollY + 140;
 
-  if (card) {
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", updateActiveLink, { passive: true });
+  updateActiveLink();
+
+  // 3. Animación de Scroll Enlazada en Cadena (Staggered Reveal)
+  const revealTargets = document.querySelectorAll(
+    ".hero-card, .skill-card, .project-card, .video-wrapper, .additional-card, .timeline-card, .reference-card, .contact-card, .skills-header, .projects-header, .video-header, .additional-header, .education-header, .references-header, .contact-header"
+  );
+
+  revealTargets.forEach((el) => el.classList.add("reveal"));
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Retardo progresivo suave según índice en pantalla
+          setTimeout(() => {
+            entry.target.classList.add("active");
+          }, (index % 3) * 90);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealTargets.forEach((target) => revealObserver.observe(target));
+
+  // 4. Inercia 3D Amortiguada en Tarjeta Hero (LERP Ultra-Smooth)
+  const heroCard = document.querySelector(".hero-card");
+  if (heroCard) {
     let currentX = 0, currentY = 0;
     let targetX = 0, targetY = 0;
-    let isHovered = false;
+    const ease = 0.04; // Factor de fricción/suavizado
 
-    // Ajusta la aceleración (menor número = movimiento más suave y amortiguado)
-    const ease = 0.05; 
-
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
+    heroCard.addEventListener("mousemove", (e) => {
+      const rect = heroCard.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
 
-      // Inclinación máxima tenue (3 grados)
-      targetX = (y / (rect.height / 2)) * -3;
-      targetY = (x / (rect.width / 2)) * 3;
+      targetX = (y / (rect.height / 2)) * -2.5;
+      targetY = (x / (rect.width / 2)) * 2.5;
     });
 
-    card.addEventListener("mouseenter", () => {
-      isHovered = true;
-    });
-
-    card.addEventListener("mouseleave", () => {
-      isHovered = false;
+    heroCard.addEventListener("mouseleave", () => {
       targetX = 0;
       targetY = 0;
     });
 
-    function updateCardTransform() {
-      // Interpolación lineal para suavizar la transición entre la posición actual y la meta
+    const animateHeroTilt = () => {
       currentX += (targetX - currentX) * ease;
       currentY += (targetY - currentY) * ease;
 
-      card.style.transform = `perspective(1000px) rotateX(${currentX.toFixed(3)}deg) rotateY(${currentY.toFixed(3)}deg)`;
+      heroCard.style.transform = `perspective(1000px) rotateX(${currentX.toFixed(3)}deg) rotateY(${currentY.toFixed(3)}deg)`;
+      requestAnimationFrame(animateHeroTilt);
+    };
 
-      requestAnimationFrame(updateCardTransform);
-    }
-
-    updateCardTransform();
+    animateHeroTilt();
   }
-});
 
-//habilidades
-/* Opcional: Agrega esto al final de tu static/js/script.js */
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".skill-card");
-
-  cards.forEach((card) => {
+  // 5. Desenfoque Sutil de Tarjetas Habilidades al Hover
+  const skillCards = document.querySelectorAll(".skill-card");
+  skillCards.forEach((card) => {
     card.addEventListener("mouseenter", () => {
-      cards.forEach((otherCard) => {
-        if (otherCard !== card) {
-          otherCard.style.opacity = "0.65";
-        }
+      skillCards.forEach((other) => {
+        if (other !== card) other.style.opacity = "0.55";
       });
     });
-
     card.addEventListener("mouseleave", () => {
-      cards.forEach((otherCard) => {
-        otherCard.style.opacity = "1";
-      });
+      skillCards.forEach((other) => (other.style.opacity = "1"));
     });
   });
-});
 
-//proyecto 
-/* Opcional: Interacción suave al pasar el cursor por la captura */
-document.addEventListener("DOMContentLoaded", () => {
+  // 6. Efecto Parallax Ligero en las Imágenes de Proyectos
   const projectCards = document.querySelectorAll(".project-card");
-
   projectCards.forEach((card) => {
     const img = card.querySelector(".project-img");
-    
     if (img) {
       card.addEventListener("mousemove", (e) => {
         const rect = card.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
         const y = (e.clientY - rect.top) / rect.height - 0.5;
-
-        img.style.transform = `scale(1.04) translate(${x * 8}px, ${y * 8}px)`;
+        img.style.transform = `scale(1.05) translate(${x * 6}px, ${y * 6}px)`;
       });
 
       card.addEventListener("mouseleave", () => {
@@ -142,20 +129,21 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
-});
 
-/* Animación suave al hacer scroll */
-document.addEventListener("DOMContentLoaded", () => {
-  const refCards = document.querySelectorAll(".reference-card");
+  // 7. Control de Reproducción Automatizado para el Video Demo
+  const videoElement = document.querySelector(".video-wrapper video");
+  if (videoElement) {
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting && !videoElement.paused) {
+            videoElement.pause();
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("appear");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  refCards.forEach((card) => observer.observe(card));
+    videoObserver.observe(videoElement);
+  }
 });
