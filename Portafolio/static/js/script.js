@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Navegación Móvil Fluid
+
+  // =================================================================
+  // MÓDULO 1: NAVEGACIÓN MÓVIL Y MENÚ HAMBURGUESA
+  // Controla la apertura y cierre del menú en pantallas pequeñas
+  // =================================================================
   const menuToggle = document.getElementById("menu-toggle");
   const navMenu = document.getElementById("nav-menu");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -19,7 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 2. ScrollSpy Suave (Resaltador de sección activa)
+
+  // =================================================================
+  // MÓDULO 2: SCROLLSPY (RESALTADO DE ENLACE ACTIVO)
+  // Cambia el enlace activo en la barra superior según la sección visible
+  // =================================================================
   const updateActiveLink = () => {
     let current = "";
     const scrollPosition = window.scrollY + 140;
@@ -43,7 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateActiveLink, { passive: true });
   updateActiveLink();
 
-  // 3. Animación de Scroll Enlazada en Cadena (Staggered Reveal)
+
+  // =================================================================
+  // MÓDULO 3: ANIMACIÓN DE REVELADO EN CADENA (STAGGERED REVEAL)
+  // Muestra elementos gradualmente a medida que el usuario hace scroll
+  // =================================================================
   const revealTargets = document.querySelectorAll(
     ".hero-card, .skill-card, .project-card, .video-wrapper, .additional-card, .timeline-card, .reference-card, .contact-card, .skills-header, .projects-header, .video-header, .additional-header, .education-header, .references-header, .contact-header"
   );
@@ -54,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          // Retardo progresivo suave según índice en pantalla
           setTimeout(() => {
             entry.target.classList.add("active");
           }, (index % 3) * 90);
@@ -67,12 +78,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   revealTargets.forEach((target) => revealObserver.observe(target));
 
-  // 4. Inercia 3D Amortiguada en Tarjeta Hero (LERP Ultra-Smooth)
+
+  // =================================================================
+  // MÓDULO 4: EFECTO DE INERCIA 3D EN LA TARJETA HERO
+  // Inclinación suave de la tarjeta principal según la posición del cursor
+  // =================================================================
   const heroCard = document.querySelector(".hero-card");
   if (heroCard) {
     let currentX = 0, currentY = 0;
     let targetX = 0, targetY = 0;
-    const ease = 0.04; // Factor de fricción/suavizado
+    const ease = 0.04;
 
     heroCard.addEventListener("mousemove", (e) => {
       const rect = heroCard.getBoundingClientRect();
@@ -99,7 +114,11 @@ document.addEventListener("DOMContentLoaded", () => {
     animateHeroTilt();
   }
 
-  // 5. Desenfoque Sutil de Tarjetas Habilidades al Hover
+
+  // =================================================================
+  // MÓDULO 5: ENFOQUE EN TARJETAS DE HABILIDADES
+  // Atenúa las tarjetas secundarias cuando pasas el cursor sobre una
+  // =================================================================
   const skillCards = document.querySelectorAll(".skill-card");
   skillCards.forEach((card) => {
     card.addEventListener("mouseenter", () => {
@@ -112,7 +131,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 6. Efecto Parallax Ligero en las Imágenes de Proyectos
+
+  // =================================================================
+  // MÓDULO 6: PARALLAX SUAVE EN IMÁGENES DE PROYECTOS
+  // Mueve ligeramente la imagen previa al mover el mouse sobre la tarjeta
+  // =================================================================
   const projectCards = document.querySelectorAll(".project-card");
   projectCards.forEach((card) => {
     const img = card.querySelector(".project-img");
@@ -130,7 +153,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 7. Control de Reproducción Automatizado para el Video Demo
+
+  // =================================================================
+  // MÓDULO 7: PAUSA AUTOMÁTICA DEL VIDEO DEMO
+  // Pausa el video de presentación cuando sale del área visible
+  // =================================================================
   const videoElement = document.querySelector(".video-wrapper video");
   if (videoElement) {
     const videoObserver = new IntersectionObserver(
@@ -146,4 +173,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     videoObserver.observe(videoElement);
   }
+
 });

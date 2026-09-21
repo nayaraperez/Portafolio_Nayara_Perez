@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Profesional</title>
+  <title>Portafolio | Nayara Pérez</title>
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
 
-  <!-- Barra de Navegación -->
+
+
+  <!-- =================================================================
+       BARRA DE NAVEGACIÓN (NAVBAR)
+      ================================================================= -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="logo">
@@ -36,12 +40,15 @@
   </nav>
 
   <main>
-    <!-- Sección 1: Acerca de mí / Hero -->
+    <!-- =================================================================
+         SECCIÓN 1: ACERCA DE MÍ (HERO)
+        ================================================================= -->
     <section id="acerca" class="acerca section-container hero-grid">
       <div class="hero-card">
         <div class="hero-content">
           <h1 class="hero-title">
-            Desarrolladora Frontend Junior
+            ¡Hola! Soy Nayara Pérez,<br>
+            <span class="highlight">Desarrolladora Frontend Junior</span>
           </h1>
           
           <p class="hero-description">
@@ -57,16 +64,17 @@
           </div>
         </div>
 
-        <!-- ESPACIO DE IMAGEN: Foto de perfil / Avatar -->
         <div class="hero-media">
           <div class="avatar-wrapper">
-            <img src="static/img/gatos.png" alt="Imagen de portada o avatar profesional" class="hero-img">
+            <img src="static/img/gatos.png" alt="Fotografía o avatar profesional de Nayara Pérez" class="hero-img">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Sección 2: Habilidades -->
+    <!-- =================================================================
+         SECCIÓN 2: HABILIDADES & TECNOLOGÍAS
+        ================================================================= -->
     <section id="habilidades" class="habilidades section-container">
       <div class="skills-header">
         <h2 class="skills-title">Habilidades & Tecnologías</h2>
@@ -116,24 +124,28 @@
       </div>
     </section>
 
-    <!-- Sección 3: Proyectos Destacados -->
+    <!-- =================================================================
+         SECCIÓN 3: PROYECTOS DESTACADOS
+        ================================================================= -->
     <section id="proyectos" class="proyectos section-container">
       <div class="projects-header">
         <h2 class="projects-title">Proyectos Destacados</h2>
       </div>
 
       <div class="projects-grid">
+        <!-- PROYECTO 1: NEUROMUNDO -->
         <article class="project-card">
           <div class="project-info">
             <h3 class="project-name">NeuroMundo</h3>
             <p class="project-description">
-              Plataforma digital orientada a la salud mental de cuidadores y la gestión conductual cotidiana en el Espectro Autista. Integra fichas conductuales y asistente IA.
+              Plataforma web informativa para detallar una app sobre salud mental de cuidadores y gestión conductual en el Espectro Autista. Como líder del equipo, colaboré en la concepción de la idea, enfocando mi aporte mayoritariamente en el desarrollo web junto a una compañera.
             </p>
             
             <div class="tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag">Liderazgo de Equipo</span>
+              <span class="tag">Desarrollo Web</span>
+              <span class="tag">App Web</span>
+              <span class="tag">HTML5 / CSS3 / JS</span>
             </div>
 
             <div class="project-links">
@@ -150,14 +162,52 @@
 
           <div class="project-preview">
             <div class="preview-frame">
-              <img src="static/img/neuromundo_preview.jpg" alt="Vista previa de NeuroMundo" class="project-img">
+              <img src="static/img/neuromundo_preview.jpg" alt="Vista previa del proyecto NeuroMundo" class="project-img">
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2: PLATAFORMA WEB NEUROMUNDO -->
+        <article class="project-card">
+          <div class="project-info">
+            <h3 class="project-name">Plataforma Web NeuroMundo</h3>
+            <p class="project-description">
+              Sitio web informativo para dar a conocer la app NeuroMundo. Colaboré en las ideas iniciales del proyecto y centré mi trabajo principalmente en la maquetación y desarrollo de la página junto a una compañera.
+            </p>
+            
+            <div class="tags">
+              <span class="tag">Ideación</span>
+              <span class="tag">Maquetación Web</span>
+              <span class="tag">Desarrollo Web</span>
+              <span class="tag">Trabajo en Equipo</span>
+            </div>
+
+            <div class="project-links">
+              <!-- REEMPLAZAR: Si este sitio tiene una URL de demo distinta -->
+              <a href="https://iris014.github.io/App-Neuro-Mundo/" target="_blank" rel="noopener" class="btn btn-primary">
+                <span>Ver Demo</span>
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <!-- REEMPLAZAR: Si este sitio tiene un repositorio distinto -->
+              <a href="https://github.com/Iris014/App-Neuro-Mundo" target="_blank" rel="noopener" class="btn btn-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-preview">
+            <div class="preview-frame">
+              <img src="static/img/neuromundo_preview.jpg" alt="Vista previa del sitio web NeuroMundo" class="project-img">
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- NUEVA SECCIÓN OBLIGATORIA: Video de Presentación / Demostración (Requisito 6) -->
+    <!-- =================================================================
+         SECCIÓN 4: VIDEO DE PRESENTACIÓN / DEMO
+        ================================================================= -->
     <section id="video" class="video-section section-container">
       <div class="video-header">
         <h2 class="video-title">Video de Presentación & Demostración</h2>
@@ -165,20 +215,16 @@
       </div>
 
       <div class="video-wrapper">
-        <!-- Puedes usar un video local con HTML5 -->
         <video controls poster="static/img/neuromundo_preview.jpg" width="100%">
           <source src="static/video/Loom _ Free Screen & Video Recording Software _ Loom - 14 August 2026 (1).mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de video HTML5.
         </video>
-
-        <!-- O en su lugar un iframe de YouTube/Vimeo si prefieres alojarlo fuera: -->
-        <!-- 
-        <iframe width="100%" height="450" src="https://www.youtube.com/embed/TU_VIDEO_ID" title="Video de presentación" frameborder="0" allowfullscreen></iframe>
-        -->
       </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: Tareas y Trabajos Adicionales (Requisito 2) -->
+    <!-- =================================================================
+         SECCIÓN 5: TRABAJOS ADICIONALES
+        ================================================================= -->
     <section id="trabajos-adicionales" class="trabajos-adicionales section-container">
       <div class="additional-header">
         <h2 class="additional-title">Tareas y Ejercicios Adicionales</h2>
@@ -195,6 +241,7 @@
             <span class="tag">JavaScript</span>
           </div>
           <div class="card-links">
+            <!-- REEMPLAZAR: Colocar el link directo al repositorio de la calculadora si existe -->
             <a href="https://github.com/nayaraperez" target="_blank" rel="noopener" class="btn btn-outline">Ver en GitHub</a>
           </div>
         </article>
@@ -207,13 +254,16 @@
             <span class="tag">JS Validation</span>
           </div>
           <div class="card-links">
+            <!-- REEMPLAZAR: Colocar el link directo al repositorio del formulario si existe -->
             <a href="https://github.com/nayaraperez" target="_blank" rel="noopener" class="btn btn-outline">Ver en GitHub</a>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- Sección 4: Educación -->
+    <!-- =================================================================
+         SECCIÓN 6: EDUCACIÓN & CERTIFICACIONES
+        ================================================================= -->
     <section id="educacion" class="educacion section-container">
       <div class="education-header">
         <h2 class="education-title">Educación & Certificaciones</h2>
@@ -261,7 +311,9 @@
       </div>
     </section>
 
-    <!-- Sección 5: Referencias -->
+    <!-- =================================================================
+         SECCIÓN 7: REFERENCIAS PROFESIONALES
+        ================================================================= -->
     <section id="referencias" class="referencias section-container">
       <div class="references-header">
         <h2 class="references-title">Referencias Profesionales</h2>
@@ -292,7 +344,9 @@
       </div>
     </section>
 
-    <!-- NUEVA SECCIÓN OBLIGATORIA: Contacto Profesional & LinkedIn (Requisito 3) -->
+    <!-- =================================================================
+         SECCIÓN 8: CONTACTO PROFESIONAL
+        ================================================================= -->
     <section id="contacto" class="contacto section-container">
       <div class="contact-header">
         <h2 class="contact-title">Contacto Profesional</h2>
@@ -300,25 +354,24 @@
       </div>
 
       <div class="contact-cards-container">
-        <!-- Correo Electrónico Profesional (Obligatorio) -->
         <article class="contact-card">
           <h3>Correo Electrónico</h3>
           <p>Escríbeme para oportunidades laborales, prácticas o consultas técnicas.</p>
+          <!-- REEMPLAZAR: Tu correo real en el href (mailto) y en el span -->
           <a href="mailto:tu-correo-profesional@email.com" class="btn btn-primary">
             <span>tu-correo-profesional@email.com</span>
           </a>
         </article>
 
-        <!-- Perfil de LinkedIn (Obligatorio) -->
         <article class="contact-card">
           <h3>Perfil de LinkedIn</h3>
           <p>Conéctate conmigo en LinkedIn para revisar mi trayectoria y red profesional.</p>
+          <!-- REEMPLAZAR: Tu enlace real de LinkedIn -->
           <a href="https://www.linkedin.com/in/tu-perfil/" target="_blank" rel="noopener" class="btn btn-outline">
             <span>Ver Perfil en LinkedIn</span>
           </a>
         </article>
 
-        <!-- Perfil de GitHub -->
         <article class="contact-card">
           <h3>Repositorios GitHub</h3>
           <p>Explora el código fuente de mis proyectos y ejercicios de aprendizaje.</p>
@@ -330,13 +383,17 @@
     </section>
   </main>
 
-  <!-- NUEVO PIE DE PÁGINA (Footer Profesional) -->
+  <!-- =================================================================
+       PIE DE PÁGINA (FOOTER)
+      ================================================================= -->
   <footer class="footer">
     <div class="footer-container">
-      <p>&copy; 2026 -Nayara Pérez</p>
+      <p>&copy; 2026 - Nayara Pérez</p>
       <div class="footer-links">
+        <!-- REEMPLAZAR: Tu enlace real de LinkedIn -->
         <a href="https://www.linkedin.com/in/tu-perfil/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/nayaraperez" target="_blank" rel="noopener">GitHub</a>
+        <!-- REEMPLAZAR: Tu correo real -->
         <a href="mailto:tu-correo-profesional@email.com">Contacto</a>
       </div>
     </div>

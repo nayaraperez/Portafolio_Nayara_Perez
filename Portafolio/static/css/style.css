@@ -1,6 +1,7 @@
-/* ==========================================
-   RESET Y ESTILOS BASE
-   ========================================== */
+/* =================================================================
+   1. RESET GENERAL Y ESTILOS BASE
+   Configuración global de márgenes, fuentes y comportamiento de scroll
+   ================================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -13,15 +14,35 @@ html {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: transparent; /* Permite ver el video de fondo */
   color: #09090b;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ==========================================
-   CLASE DE ANIMACIÓN AL HACER SCROLL (REVEAL)
-   ========================================== */
+
+/* =================================================================
+   2. ESTILOS DEL VIDEO ANIMADO DE FONDO Y CAPA DE CONTRASTE
+   Asegura que el video cubra toda la pantalla por detrás
+   ================================================================= */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+
+
+
+/* =================================================================
+   3. ANIMACIÓN DE REVELADO AL HACER SCROLL (.reveal)
+   Efecto de aparición progresiva para tarjetas y secciones
+   ================================================================= */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -34,9 +55,11 @@ body {
   transform: translateY(0);
 }
 
-/* ==========================================
-   BARRA DE NAVEGACIÓN
-   ========================================== */
+
+/* =================================================================
+   4. BARRA DE NAVEGACIÓN (NAVBAR)
+   Estilos de cabecera fija, logo y menú desplegable móvil
+   ================================================================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -175,9 +198,10 @@ body {
   }
 }
 
-/* ==========================================
-   BOTONES & COMPONENTES REUTILIZABLES
-   ========================================== */
+
+/* =================================================================
+   5. BOTONES Y ETIQUETAS REUTILIZABLES (.btn, .tag)
+   ================================================================= */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -251,9 +275,11 @@ body {
   transform: translateY(-2px);
 }
 
-/* ==========================================
-   SECCIÓN 1: ACERCA DE MÍ / HERO
-   ========================================== */
+
+/* =================================================================
+   6. SECCIÓN ACERCA DE MÍ (HERO)
+   Tarjetas con efecto de cristal esmerilado (backdrop-filter)
+   ================================================================= */
 .acerca {
   padding: 120px 1.5rem 60px;
   display: flex;
@@ -351,9 +377,10 @@ body {
   .hero-buttons { justify-content: center; }
 }
 
-/* ==========================================
-   SECCIÓN 2: HABILIDADES
-   ========================================== */
+
+/* =================================================================
+   7. SECCIÓN HABILIDADES
+   ================================================================= */
 .habilidades {
   padding: 80px 1.5rem;
   max-width: 1100px;
@@ -421,9 +448,10 @@ body {
   color: #09090b;
 }
 
-/* ==========================================
-   SECCIÓN 3: PROYECTOS DESTACADOS
-   ========================================== */
+
+/* =================================================================
+   8. SECCIÓN PROYECTOS DESTACADOS
+   ================================================================= */
 .proyectos {
   padding: 80px 1.5rem;
   max-width: 1100px;
@@ -515,9 +543,10 @@ body {
   .project-preview { order: -1; }
 }
 
-/* ==========================================
-   SECCIÓN 4: VIDEO DE PRESENTACIÓN
-   ========================================== */
+
+/* =================================================================
+   9. SECCIÓN VIDEO DEMO DE PRESENTACIÓN
+   ================================================================= */
 .video-section {
   padding: 80px 1.5rem;
   max-width: 1100px;
@@ -554,9 +583,10 @@ body {
   outline: none;
 }
 
-/* ==========================================
-   SECCIÓN 5: TRABAJOS ADICIONALES
-   ========================================== */
+
+/* =================================================================
+   10. SECCIÓN TRABAJOS ADICIONALES
+   ================================================================= */
 .trabajos-adicionales {
   padding: 80px 1.5rem;
   max-width: 1100px;
@@ -608,9 +638,10 @@ body {
   margin-top: auto;
 }
 
-/* ==========================================
-   SECCIÓN 6: EDUCACIÓN & TIMELINE
-   ========================================== */
+
+/* =================================================================
+   11. SECCIÓN EDUCACIÓN & LÍNEA DE TIEMPO (TIMELINE)
+   ================================================================= */
 .educacion {
   padding: 80px 1.5rem;
   max-width: 1100px;
@@ -702,9 +733,10 @@ body {
   line-height: 1.6;
 }
 
-/* ==========================================
-   SECCIÓN 7: REFERENCIAS PROFESIONALES
-   ========================================== */
+
+/* =================================================================
+   12. SECCIÓN REFERENCIAS PROFESIONALES
+   ================================================================= */
 .referencias {
   padding: 80px 1.5rem;
   max-width: 1100px;
@@ -805,9 +837,10 @@ body {
   border-color: #09090b;
 }
 
-/* ==========================================
-   SECCIÓN 8: CONTACTO PROFESIONAL
-   ========================================== */
+
+/* =================================================================
+   13. SECCIÓN CONTACTO PROFESIONAL
+   ================================================================= */
 .contacto {
   padding: 80px 1.5rem;
   max-width: 1100px;
@@ -863,9 +896,10 @@ body {
   word-break: break-all;
 }
 
-/* ==========================================
-   FOOTER (PIE DE PÁGINA)
-   ========================================== */
+
+/* =================================================================
+   14. PIE DE PÁGINA (FOOTER)
+   ================================================================= */
 .footer {
   background-color: #ffffff;
   border-top: 1px solid #e4e4e7;
