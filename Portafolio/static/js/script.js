@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-  // 2. Animación simple de entrada al hacer scroll
   const revealCards = document.querySelectorAll(
     ".hero-card, .skill-card, .project-card, .video-wrapper, .additional-card, .timeline-card, .reference-card, .contact-card"
   );
