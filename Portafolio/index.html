@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- =================================================================
+       ENCABEZADO Y CONFIGURACIÓN BASE
+       ================================================================= -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio | Nayara Pérez</title>
@@ -8,262 +11,292 @@
 </head>
 <body>
 
-  <!-- NAVEGACIÓN -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">
-        <img src="static/img/logo_cat.png" alt="Logo" class="logo-img">
+  <!-- =================================================================
+       BARRA DE NAVEGACIÓN
+       ================================================================= -->
+  <nav class="barra-navegacion">
+    <div class="contenedor-navegacion">
+      <!-- Logotipo de la marca -->
+      <a href="#" class="logotipo">
+        <img src="static/img/logo_cat.png" alt="Logotipo personal" class="imagen-logotipo">
         <span>Portafolio</span>
       </a>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <!-- Botón menú hamburguesa (móviles) -->
+      <button class="boton-menu" id="boton-menu" aria-label="Abrir menú de navegación">
+        <span class="barra"></span>
+        <span class="barra"></span>
+        <span class="barra"></span>
       </button>
 
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="#acerca" class="nav-link active">Inicio</a></li>
-        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-        <li><a href="#educacion" class="nav-link">Educación</a></li>
-        <li><a href="#referencias" class="nav-link">Referencias</a></li>
-        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      <!-- Menú de enlaces principales -->
+      <ul class="menu-navegacion" id="menu-navegacion">
+        <li><a href="#acerca" class="enlace-navegacion">Inicio</a></li>
+        <li><a href="#habilidades" class="enlace-navegacion">Habilidades</a></li>
+        <li><a href="#proyectos" class="enlace-navegacion">Proyectos</a></li>
+        <li><a href="#video-demostracion" class="enlace-navegacion">Video</a></li>
+        <li><a href="#educacion" class="enlace-navegacion">Educación</a></li>
+        <li><a href="#referencias" class="enlace-navegacion">Referencias</a></li>
+        <li><a href="#contacto" class="enlace-navegacion">Contacto</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- =================================================================
+       CONTENIDO PRINCIPAL
+       ================================================================= -->
   <main>
-    <!-- ACERCA DE MÍ -->
+
+    <!-- ---------------------------------------------------------------
+         SECCIÓN: ACERCA DE MÍ (PRESENTACIÓN / HERO)
+         --------------------------------------------------------------- -->
     <section id="acerca" class="acerca">
-      <div class="hero-card">
-        <div class="hero-content">
-          <h1 class="hero-title">
+      <div class="tarjeta-presentacion">
+        <div class="contenido-presentacion">
+          <h1 class="titulo-presentacion">
             ¡Hola! Soy Nayara Pérez,<br>
-            <span class="highlight">Desarrolladora Frontend Junior</span>
+            <span class="destacado">Desarrolladora Frontend Junior</span>
           </h1>
           
-          <p class="hero-description">
+          <p class="descripcion-presentacion">
             Mi enfoque está en construir interfaces web adaptables y dinámicas, unificando un diseño visual cuidado con una navegación fluida e intuitiva. Me impulsa el aprendizaje activo y la curiosidad por seguir creciendo en cada proyecto.
           </p>
           
-          <div class="hero-buttons">
-            <a href="#proyectos" class="btn btn-primary">Ver Trabajos</a>
-            <a href="#contacto" class="btn btn-outline">Contactar</a>
+          <div class="botones-presentacion">
+            <a href="#proyectos" class="boton boton-principal">Ver Trabajos</a>
+            <a href="#contacto" class="boton boton-borde">Contactar</a>
           </div>
         </div>
 
-        <div class="hero-media">
-          <div class="avatar-wrapper">
-            <img src="static/img/gatos.png" alt="Fotografía o avatar profesional de Nayara Pérez" class="hero-img">
+        <div class="multimedia-presentacion">
+          <div class="contenedor-avatar">
+            <img src="static/img/gatos.png" alt="Fotografía profesional de Nayara Pérez" class="imagen-presentacion">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- HABILIDADES -->
-    <section id="habilidades" class="habilidades section-container">
-      <div class="skills-header">
-        <h2 class="skills-title">Habilidades & Tecnologías</h2>
+    <!-- ---------------------------------------------------------------
+         SECCIÓN: HABILIDADES Y TECNOLOGÍAS
+         --------------------------------------------------------------- -->
+    <section id="habilidades" class="habilidades contenedor-seccion">
+      <div class="encabezado-habilidades">
+        <h2 class="titulo-habilidades">Habilidades & Tecnologías</h2>
       </div>
 
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="card-header">
+      <div class="cuadricula-habilidades">
+        <article class="tarjeta-habilidad">
+          <div class="encabezado-tarjeta">
             <h3>Lenguajes Principales</h3>
           </div>
-          <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
+          <div class="etiquetas">
+            <span class="etiqueta">HTML</span>
+            <span class="etiqueta">CSS</span>
+            <span class="etiqueta">JavaScript</span>
           </div>
-        </div>
+        </article>
 
-        <div class="skill-card">
-          <div class="card-header">
+        <article class="tarjeta-habilidad">
+          <div class="encabezado-tarjeta">
             <h3>Herramientas & Entorno</h3>
           </div>
-          <div class="tags">
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">VS Code</span>
+          <div class="etiquetas">
+            <span class="etiqueta">Git</span>
+            <span class="etiqueta">GitHub</span>
+            <span class="etiqueta">VS Code</span>
           </div>
-        </div>
+        </article>
 
-        <div class="skill-card">
-          <div class="card-header">
+        <article class="tarjeta-habilidad">
+          <div class="encabezado-tarjeta">
             <h3>Desarrollo Frontend</h3>
           </div>
-          <div class="tags">
-            <span class="tag">Maquetación Responsiva</span>
-            <span class="tag">Manipulación DOM</span>
+          <div class="etiquetas">
+            <span class="etiqueta">Maquetación Responsiva</span>
+            <span class="etiqueta">Manipulación DOM</span>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="proyectos section-container">
-      <div class="projects-header">
-        <h2 class="projects-title">Proyectos Destacados</h2>
+    <!-- ---------------------------------------------------------------
+         SECCIÓN: PROYECTOS 
+         --------------------------------------------------------------- -->
+    <section id="proyectos" class="proyectos contenedor-seccion">
+      <div class="encabezado-proyectos">
+        <h2 class="titulo-proyectos">Proyectos</h2>
       </div>
 
-      <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-info">
-            <h3 class="project-name">NeuroMundo</h3>
-            <p class="project-description">
+      <div class="cuadricula-proyectos">
+        <!-- Proyecto 1 -->
+        <div class="tarjeta-proyecto">
+          <div class="informacion-proyecto">
+            <h3 class="nombre-proyecto">NeuroMundo</h3>
+            <p class="descripcion-proyecto">
               Plataforma web informativa para detallar una app sobre salud mental de cuidadores y gestión conductual en el Espectro Autista.
             </p>
             
-            <div class="tags">
-              <span class="tag">Liderazgo de Equipo</span>
-              <span class="tag">Desarrollo Web</span>
-              <span class="tag">HTML / CSS / JS</span>
+            <div class="etiquetas">
+              <span class="etiqueta">Liderazgo de Equipo</span>
+              <span class="etiqueta">Desarrollo Web</span>
+              <span class="etiqueta">HTML / CSS / JS</span>
             </div>
 
-            <div class="project-links">
-              <a href="https://iris014.github.io/App-Neuro-Mundo/" target="_blank" rel="noopener" class="btn btn-primary">Ver Demo</a>
-              <a href="https://github.com/Iris014/App-Neuro-Mundo" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
-            </div>
-          </div>
-
-          <div class="project-preview">
-            <div class="preview-frame">
-              <img src="static/img/imagen_proyecto.png" alt="Vista previa del proyecto NeuroMundo" class="project-img">
+            <div class="enlaces-proyecto">
+              <a href="https://iris014.github.io/App-Neuro-Mundo/" target="_blank" rel="noopener" class="boton boton-principal">Ver Demo</a>
+              <a href="https://github.com/Iris014/App-Neuro-Mundo" target="_blank" rel="noopener" class="boton boton-borde">GitHub</a>
             </div>
           </div>
-        </article>
 
-        <article class="project-card">
-          <div class="project-info">
-            <h3 class="project-name">Plataforma Web NeuroMundo</h3>
-            <p class="project-description">
+          <div class="vista-previa-proyecto">
+            <div class="marco-vista-previa">
+              <img src="static/img/imagen_proyecto.png" alt="Vista previa del proyecto NeuroMundo" class="imagen-proyecto">
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="tarjeta-proyecto">
+          <div class="informacion-proyecto">
+            <h3 class="nombre-proyecto">Plataforma Web NeuroMundo</h3>
+            <p class="descripcion-proyecto">
               Sitio web informativo para dar a conocer la app NeuroMundo. Maquetación y desarrollo web colaborativo.
             </p>
             
-            <div class="tags">
-              <span class="tag">Maquetación Web</span>
-              <span class="tag">Desarrollo Web</span>
+            <div class="etiquetas">
+              <span class="etiqueta">Maquetación Web</span>
+              <span class="etiqueta">Desarrollo Web</span>
             </div>
 
-            <div class="project-links">
-              <a href="https://iris014.github.io/Neu-Industries/" target="_blank" rel="noopener" class="btn btn-primary">Ver Demo</a>
-              <a href="https://github.com/Iris014/Neu-Industries" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
-            </div>
-          </div>
-
-          <div class="project-preview">
-            <div class="preview-frame">
-              <img src="static/img/web_foto.png" alt="Vista previa del sitio web NeuroMundo" class="project-img">
+            <div class="enlaces-proyecto">
+              <a href="https://iris014.github.io/Neu-Industries/" target="_blank" rel="noopener" class="boton boton-principal">Ver Demo</a>
+              <a href="https://github.com/Iris014/Neu-Industries" target="_blank" rel="noopener" class="boton boton-borde">GitHub</a>
             </div>
           </div>
+
+          <div class="vista-previa-proyecto">
+            <div class="marco-vista-previa">
+              <img src="static/img/web_foto.png" alt="Vista previa del sitio web NeuroMundo" class="imagen-proyecto">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------
+         SECCIÓN: VIDEO DEMOSTRACIÓN
+         --------------------------------------------------------------- -->
+    <section id="video-demostracion" class="seccion-video contenedor-seccion">
+      <div class="encabezado-video">
+        <h2 class="titulo-video">Video de Presentación</h2>
+        <p class="subtitulo-video">Conoce más sobre mi trayectoria y el funcionamiento de mis proyectos.</p>
+      </div>
+
+      <div class="contenedor-video">
+        <video controls poster="portada.jpg">
+          <source src="static/video/Loom _ Free Screen & Video Recording Software _ Loom - 14 August 2026 (1).mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video HTML5.
+        </video>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------
+         SECCIÓN: EDUCACIÓN Y CERTIFICACIONES
+         --------------------------------------------------------------- -->
+    <section id="educacion" class="educacion contenedor-seccion">
+      <div class="encabezado-educacion">
+        <h2 class="titulo-educacion">Educación & Certificaciones</h2>
+      </div>
+
+      <div class="linea-tiempo">
+        <article class="tarjeta-linea-tiempo">
+          <h3 class="titulo-estudio">Técnico en Programación</h3>
+          <span class="insignia-institucion">Liceo Técnico Vate Vicente Huidobro</span>
+        </article>
+
+        <article class="tarjeta-linea-tiempo">
+          <h3 class="titulo-estudio">Frontend Junior</h3>
+          <span class="insignia-institucion">Skillnest</span>
+        </article>
+
+        <article class="tarjeta-linea-tiempo">
+          <h3 class="titulo-estudio">Desarrollo Full Stack Python</h3>
+          <span class="insignia-institucion">Skillnest</span>
         </article>
       </div>
     </section>
 
-    <!-- VIDEO DEMO -->
-    <section id="video" class="video-section section-container">
-      <div class="video-header">
-        <h2 class="video-title">Video de Presentación</h2>
-        <p class="video-subtitle">Conoce más sobre mi trayectoria y el funcionamiento de mis proyectos.</p>
+    <!-- ---------------------------------------------------------------
+         SECCIÓN: REFERENCIAS PROFESIONALES
+         --------------------------------------------------------------- -->
+    <section id="referencias" class="referencias contenedor-seccion">
+      <div class="encabezado-referencias">
+        <h2 class="titulo-referencias">Referencias Profesionales</h2>
       </div>
 
-<div class="video-wrapper">
-  <video controls poster="portada.jpg">
-    <source src="static/video/Loom _ Free Screen & Video Recording Software _ Loom - 14 August 2026 (1).mp4" type="video/mp4">
-    Tu navegador no soporta la etiqueta de video.
-  </video>
-</div>
-    </section>
-
-
-    <!-- EDUCACIÓN -->
-    <section id="educacion" class="educacion section-container">
-      <div class="education-header">
-        <h2 class="education-title">Educación & Certificaciones</h2>
-      </div>
-
-      <div class="timeline">
-        <article class="timeline-card">
-          <h3 class="degree-title">Técnico en Programación</h3>
-          <span class="institution-badge">Liceo Técnico Vate Vicente Huidobro</span>
-        </article>
-
-        <article class="timeline-card">
-          <h3 class="degree-title">Frontend Junior</h3>
-          <span class="institution-badge">Skillnest</span>
-        </article>
-
-        <article class="timeline-card">
-          <h3 class="degree-title">Desarrollo Full Stack Python</h3>
-          <span class="institution-badge">Skillnest</span>
-        </article>
-      </div>
-    </section>
-
-    <!-- REFERENCIAS -->
-    <section id="referencias" class="referencias section-container">
-      <div class="references-header">
-        <h2 class="references-title">Referencias Profesionales</h2>
-      </div>
-
-      <div class="references-grid">
-        <article class="reference-card">
-          <div class="ref-avatar-wrapper">
-            <img src="static/img/persona.png" alt="Dany Hernández" class="ref-img">
+      <div class="cuadricula-referencias">
+        <article class="tarjeta-referencia">
+          <div class="contenedor-avatar-referencia">
+            <img src="static/img/persona.png" alt="Fotografía de Dany Hernández" class="imagen-referencia">
           </div>
           <h3>Dany Hernández</h3>
-          <p class="ref-title">Instructor / Mentor Técnico</p>
+          <p class="cargo-referencia">Instructor / Mentor Técnico</p>
           
-          <div class="ref-contacts">
-            <a href="mailto:danyhernandez@comeduc.cl" class="ref-contact-item">dany.hernandez@email.com</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="ref-contact-item">LinkedIn</a>
+          <div class="contactos-referencia">
+            <a href="mailto:dany.hernandez@email.com" class="item-contacto-referencia">dany.hernandez@email.com</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="item-contacto-referencia">LinkedIn</a>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="contacto section-container">
-      <div class="contact-header">
-        <h2 class="contact-title">Contacto Profesional</h2>
+    <!-- ---------------------------------------------------------------
+         SECCIÓN: CONTACTO PROFESIONAL
+         --------------------------------------------------------------- -->
+    <section id="contacto" class="contacto contenedor-seccion">
+      <div class="encabezado-contacto">
+        <h2 class="titulo-contacto">Contacto Profesional</h2>
       </div>
 
-      <div class="contact-cards-container">
-        <article class="contact-card">
+      <div class="contenedor-tarjetas-contacto">
+        <article class="tarjeta-contacto">
           <h3>Correo Electrónico</h3>
           <p>Escríbeme para cualquier oportunidad laboral o consulta.</p>
-          <!-- Reemplazar tu correo real aquí -->
-          <a href="mailto:nayaraperez433@email.com" class="btn btn-primary">nayaraperez433@email.com</a>
+          <a href="mailto:nayaraperez433@email.com" class="boton boton-principal">nayaraperez433@email.com</a>
         </article>
 
-        <article class="contact-card">
+        <article class="tarjeta-contacto">
           <h3>Perfil de LinkedIn</h3>
           <p>Conéctate conmigo para revisar mi trayectoria.</p>
-          <!-- Reemplazar tu URL real de LinkedIn aquí -->
-          <a href="https://www.linkedin.com/in/nayara-p%C3%A9rez-1a4970438/" target="_blank" rel="noopener" class="btn btn-outline">Ver LinkedIn</a>
+          <a href="https://www.linkedin.com/in/nayara-p%C3%A9rez-1a4970438/" target="_blank" rel="noopener" class="boton boton-borde">Ver LinkedIn</a>
         </article>
 
-        <article class="contact-card">
+        <article class="tarjeta-contacto">
           <h3>GitHub</h3>
           <p>Explora mi código fuente y repositorios.</p>
-          <a href="https://github.com/nayaraperez" target="_blank" rel="noopener" class="btn btn-outline">github.com/nayaraperez</a>
+          <a href="https://github.com/nayaraperez" target="_blank" rel="noopener" class="boton boton-borde">github.com/nayaraperez</a>
         </article>
       </div>
     </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="footer-container">
+  <!-- =================================================================
+       PIE DE PÁGINA (FOOTER)
+       ================================================================= -->
+  <footer class="pie-pagina">
+    <div class="contenedor-pie-pagina">
       <p>&copy; 2026 - Nayara Pérez</p>
-      <div class="footer-links">
+      <div class="enlaces-pie-pagina">
         <a href="https://www.linkedin.com/in/nayara-p%C3%A9rez-1a4970438/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/nayaraperez" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </footer>
 
+  <!-- =================================================================
+       SCRIPTS DE INTERACTIVIDAD
+       ================================================================= -->
   <script src="static/js/script.js"></script>
 </body>
 </html>
