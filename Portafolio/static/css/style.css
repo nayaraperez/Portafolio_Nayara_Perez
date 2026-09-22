@@ -605,3 +605,26 @@ body {
 
 
 
+
+
+
+/* -- habilidades -- */
+.etiqueta {
+  background-color: #D9C0BB;
+  color: #362B2A;
+  border: 1px solid #D4B1AF;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13.2px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icono-etiqueta {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
