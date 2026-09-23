@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset para que la barra no tape títulos */
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 }
 
 /* =================================================================
-   2. ANIMACIÓN DE REVELADO SIMPLE (.revelar)
+   2. ANIMACIÓN DE REVELADO SIMPLE
    ================================================================= */
 .revelar {
   opacity: 0;
@@ -165,10 +166,20 @@ body {
   background-color: #D9C0BB;
   color: #362B2A;
   border: 1px solid #D4B1AF;
-  padding: 5.6px 12px;
-  border-radius: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
   font-size: 13.2px;
   font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icono-etiqueta {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* =================================================================
@@ -183,24 +194,7 @@ body {
 .tarjeta-presentacion {
   width: 100%;
   max-width: 1100px;
-  
-  /* -------------------------------------------------------------
-     OPCIONES PARA CAMBIAR EL FONDO DE LA CAJA DE INICIO / SOBRE MÍ:
-     
-     Option 1: Fondo blanco estándar
-     background-color: #ffffff;
-
-     Option 2: Fondo pastel suave
-     background-color: #fff6f8;
-
-     Option 3: Degradado sutil con la paleta de colores
-     background: linear-gradient(135deg, #ffffff 0%, #fbeeed 100%);
-
-     Option 4: Imagen de fondo (descomenta y coloca tu ruta)
-     background: url('../img/tu_fondo.jpg') center/cover no-repeat;
-     ------------------------------------------------------------- */
   background-color: #ffffff;
-
   border: 1px solid #D4B1AF;
   border-radius: 16px;
   padding: 48px 32px;
@@ -269,31 +263,45 @@ body {
   margin: 0 auto;
 }
 
-.encabezado-habilidades, .encabezado-proyectos, .encabezado-video, .encabezado-educacion, .encabezado-referencias, .encabezado-contacto {
+.encabezado-habilidades, 
+.encabezado-proyectos, 
+.encabezado-video, 
+.encabezado-educacion, 
+.encabezado-referencias, 
+.encabezado-contacto {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.titulo-habilidades, .titulo-proyectos, .titulo-video, .titulo-educacion, .titulo-referencias, .titulo-contacto {
+.titulo-habilidades, 
+.titulo-proyectos, 
+.titulo-video, 
+.titulo-educacion, 
+.titulo-referencias, 
+.titulo-contacto {
   font-size: 28.8px;
   font-weight: 700;
   color: #362B2A;
 }
 
-.subtitulo-video, .subtitulo-contacto {
+.subtitulo-video, 
+.subtitulo-contacto {
   font-size: 15.2px;
   color: #6B5856;
   margin-top: 8px;
 }
 
-/* CUADRÍCULAS Y TARJETAS */
-.cuadricula-habilidades, .contenedor-tarjetas-contacto {
+.cuadricula-habilidades, 
+.contenedor-tarjetas-contacto {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 
-.tarjeta-habilidad, .tarjeta-linea-tiempo, .tarjeta-referencia, .tarjeta-contacto {
+.tarjeta-habilidad, 
+.tarjeta-linea-tiempo, 
+.tarjeta-referencia, 
+.tarjeta-contacto {
   background-color: #ffffff;
   border: 1px solid #D4B1AF;
   border-radius: 12px;
@@ -312,7 +320,7 @@ body {
 }
 
 /* =================================================================
-   7. SECCIÓN PROYECTOS Y TRABAJOS EXTRA DE PRÁCTICA
+   7. SECCIÓN PROYECTOS Y TRABAJOS EXTRA
    ================================================================= */
 .cuadricula-proyectos {
   display: flex;
@@ -331,10 +339,7 @@ body {
   align-items: center;
 }
 
-.informacion-proyecto {
-  flex: 1 1 280px;
-}
-
+.informacion-proyecto, 
 .vista-previa-proyecto {
   flex: 1 1 280px;
 }
@@ -373,7 +378,6 @@ body {
   object-fit: cover;
 }
 
-/* ESTILOS TRABAJOS EXTRA DE PRÁCTICA (DOS CAJAS JUNTA EN CUADRÍCULA) */
 .seccion-proyectos-extra {
   margin-top: 40px;
 }
@@ -602,29 +606,6 @@ body {
 }
 
 
-
-
-
-
-
-
-/* -- habilidades -- */
-.etiqueta {
-  background-color: #D9C0BB;
-  color: #362B2A;
-  border: 1px solid #D4B1AF;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-size: 13.2px;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.icono-etiqueta {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-  flex-shrink: 0;
+.icono-monocromo {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(11%) saturate(1211%) hue-rotate(314deg) brightness(97%) contrast(88%);
 }
